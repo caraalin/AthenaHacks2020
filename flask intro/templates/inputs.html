@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Your Inputs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='flask intro/static/css/style.css') }}">
+</head>
+
+
+<body>
+
+  <div class="inputsmain">
+
+    <div class="inputs">
+      <form action="{{ url_for('addfeel') }}" method="post">
+        <div id="feeling" class="box">how are you feeling today:<br>
+        <input type="number" min="1" max="10" name="feel"><br>
+        <input type="submit" value="submit" /></form><br></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inputs2">
+      <form action="{{ url_for('addassign') }}" method="post">
+        <div id="assign" class="box">assignments (name, workload, due date):<br>
+          <input type="text" name="aname" value="None"><br>
+          <input type="number" name="aworkload" value="None"><br>
+          <input type="date" name="adate" value="None"><br>
+      <input type="submit" value="submit" /></form>
+        </div>
+    </div>
+
+  </div>
+
+</body>
+
+
+</html>
